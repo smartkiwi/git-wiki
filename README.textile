@@ -12,6 +12,7 @@ h2. Requirements
 * ultraviolet (uv) - requires "Oniguruma":http://www.geocities.jp/kosako3/oniguruma/
 
 h2. Changes
+
 * Uv disabled (Oniguruma doesn't work on my Leopard see error:http://p.caboo.se/pastes/153337)
 * fix: default layout set from git-wiki.rb - it was not working for me
 * fix: _style.css added to git-wiki.rb
