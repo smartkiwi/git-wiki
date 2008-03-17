@@ -1,0 +1,157 @@
+/* elements */
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: Helvetica, Arial, "Deja Vu Sans", "Bitstream Vera Sans", sans-serif;
+  font-size: .95em;
+  line-height: 1.6em;
+  margin: 2em;
+}
+
+a { 
+  color: #6d7fa3;
+  text-decoration: none;
+}
+a:visited { color: #7b69b0; }
+a:hover { text-decoration: underline; }
+
+code, pre, .delta {
+  font-family: "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", "Inconsolata", "Consolas", monospace;
+}
+
+h1 {
+  color: #333;
+  font-size: 3.5em;
+  margin: 24px 0 8px 0;
+}
+
+input[type=text] { 
+  border: 1px solid #ccc; 
+  font-family: Helvetica, Arial, "Deja Vu Sans", "Bitstream Vera Sans", sans-serif;
+  font-size: 0.875em;
+}
+
+label { font-size: .9em; }
+
+table {
+  font-size: 0.9em;
+  width: 100%;
+}
+
+textarea {
+  border: 1px solid #ccc;
+  font-family: "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", "Inconsolata", "Consolas", monospace;
+  font-size: .9em;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: square;
+  padding: 0;
+}
+
+/* classes */
+
+.cancel {
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 14px;
+}
+.cancel:before { content: "("; }
+.cancel:after { content: ")" }
+
+.content {
+  margin-left: 35%;
+  padding: 10px 10px 2px 10px;
+}
+
+.delta {
+  font-size: 1.1em;
+  padding: 0;
+}
+
+.edit textarea {
+  display: block;
+  margin-bottom: 5px;
+  max-height: 300px;
+  min-width: 100%;
+}
+
+.nav_link, .nav_link:visited {
+  display: inline;
+  padding: 3px;
+  color: #666;
+}
+
+.nav_link:hover {
+  background-color: #d1ccdb;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav_list, #footer {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  list-style-type: none;
+  padding: 4px;
+  text-align: right;
+}
+
+.nav_list li {
+  display: inline;
+  padding-right: 10px;
+}
+
+.right { text-align: right; }
+
+.search_result { margin-bottom: 15px; }
+
+.search_result .match {
+  line-height: 1em;
+  margin-bottom: 15px;
+}
+
+.search_term { color: #999; }
+
+.submit {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.sub_nav { 
+  float: left; 
+  padding-top: 8px;
+}
+
+.sub_nav .details {
+  color: #888;
+  font-size: .85em;
+  margin-left: 0.3em;
+}
+
+/* ids */
+
+#container {
+ clear: both;
+ margin: auto;
+ width: 70%;
+}
+
+#edit_textarea {
+  height: 35em;
+  margin-top: 1.5em;
+  width: 100%;
+}
+#message_textarea {
+  height: 4em;
+  width: 100%;
+}
+
+#footer { clear: both; }
+#footer a, #footer a:visited { color: #666; }
+
+#search_field {
+  border: 1px solid #ccc;
+  color: #999;
+}

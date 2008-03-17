@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%= @title %></title>
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/code.css" type="text/css" media="screen" />
+    <script language="javascript" type="text/javascript" src="/app.js"></script>
+    <script language="javascript" type="text/javascript" src="/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/jeditable.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <form method="get" action="/a/search">
+        <ul class="nav_list" id="top_nav">
+          <li><a href="/" class="nav_link">home</a></li>
+          <li><a href="/a/branches" class="nav_link">branches</a></li>        
+          <li><a href="/a/history" class="nav_link">history</a></li>        
+          <li><a href="/a/list" class="nav_link">pages</a></li>
+          <li><a href="/a/tarball" class="nav_link">export</a></li>
+          <li><input type="text" name="search" size="15" value="search" id="search_field" onfocus="clearField(this);" /></li>
+        </ul>
+      </form>
+      <%= yield %>
+      <div id="footer">
+        powered by <a href="http://github.com/sr/git-wiki/network">git-wiki</a>
+      </div>
+    </div>
+  </body>
+</html>

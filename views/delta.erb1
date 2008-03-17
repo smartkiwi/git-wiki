@@ -1,0 +1,15 @@
+<h1>Diff of <a href="/<%= @page.name %>"><%= @page.name %></a></h1>
+
+<div class="sub_nav">
+  <a href="/a/patch/<%= @page.name %>/<%= params[:rev] %>" class="nav_link">patch file</a> &bull;
+  <a href="/h/<%= @page.name %>" class="nav_link">history</a> &bull;
+  <a href="/e/<%= @page.name %>" class="nav_link">edit</a> 
+</div>
+
+<div class="content">
+  <div class="delta">
+  <pre>
+    <%= Uv.parse(@page.delta(params[:rev]), "xhtml", "diff", false, UV_THEME) %>
+  </pre>
+  </div>
+</div>
