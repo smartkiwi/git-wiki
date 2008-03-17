@@ -1,10 +1,30 @@
 #!/usr/bin/env ruby
 
 require 'environment'
-require 'lib/sinatra/lib/sinatra'
+#require '/usr/lib/ruby/user-gems/1.8/gems/sinatra-0.1.7/lib/sinatra.rb'
+
+
+#%w(rubygems sinatra git bluecloth rubypants haml).each do |dependency|                                         
+#%w(rubygems sinatra).each do |dependency|                                         
+#
+#    begin                                                                                                        
+#	require dependency                                                                                         
+#    rescue LoadError => e                                                                                        
+#	puts "You need to install #{dependency} before we can proceed"                                             
+#    end                                                                                                          
+#end      
+
+
+layout do                                                                                              
+    File.read('views/layout.erb')
+end
 
 get('/') { redirect "/#{HOMEPAGE}" }
 
+
+get('/_style.css') { header 'Content-Type' => 'text/css'; File.read(File.join(File.dirname(__FILE__), 'css', 'style.css')) }                                                      
+#get('/_code.css') { header 'Content-Type' => 'text/css'; File.read(File.join(File.dirname(__FILE__), 'css', "#{UV_THEME}.css")) }                                                                                             
+get('/_app.js') { header 'Content-Type' => 'application/x-javascript'; File.read(File.join(File.dirname(__FILE__), 'javascripts', "application.js")) }
 # page paths
 
 get '/:page' do
@@ -149,7 +169,8 @@ private
 
   def show(template, title)
     @title = title
-    erb(template)
+
+    erb template
   end
 
   def touchfile

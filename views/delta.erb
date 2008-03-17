@@ -8,6 +8,8 @@
 
 <div class="content">
   <div class="delta">
-    <%= Uv.parse(@page.delta(params[:rev]), "xhtml", "diff", false, UV_THEME) %>
+  <pre>
+    <%= @page.delta(params[:rev]) %>
+  </pre>
   </div>
 </div>
